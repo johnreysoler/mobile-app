@@ -10,6 +10,7 @@ import Feedback from './AppInfo/Feedback';
 import TermsAndConditions from './AppInfo/TermsAndConditions';
 import PrivacyStatement from './AppInfo/PrivacyStatement';
 import FoodIndex from './Food/FoodIndex';
+import BasketIndex from './Food/Basket/BasketIndex';
 
 const Stack = createStackNavigator();
 export default function AppStack() {
@@ -24,6 +25,7 @@ export default function AppStack() {
         { name : 'TermsAndConditions', route: TermsAndConditions},
         { name : 'PrivacyStatement', route: PrivacyStatement},
         { name : 'FoodIndex', route: FoodIndex},
+        { name : 'BasketIndex', route: BasketIndex},
     ])
     return (
       <Stack.Navigator screenOptions={{ header: () => <View /> }}>
