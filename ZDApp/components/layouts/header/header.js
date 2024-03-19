@@ -1,9 +1,8 @@
 import { useState } from "react";
-import { View,Text, TouchableOpacity, StyleSheet,Alert } from "react-native";
+import { View,Text, TouchableOpacity } from "react-native";
 import Icon from 'react-native-vector-icons/FontAwesome6';
 
 export default function Header({navigation,headerbutton,name,isOpenDrawerComponent,bgColor}){
-    const [ItemCount, setItemCount] = useState()
     let isDrawer = 'bars'
 
     if(!isOpenDrawerComponent){
@@ -33,7 +32,8 @@ export default function Header({navigation,headerbutton,name,isOpenDrawerCompone
                     headerbutton.map((item)=>{
                         return (
                             <TouchableOpacity key={item.text} onPress={item.action} style={{marginHorizontal:10}}>
-                                <Text style={{marginTop:3}}>{item.text}</Text>
+                                { item.text !== '' ? <Text style={{marginTop:3}}>{item.text}</Text> : null}
+                                
                                 <View style={{flexDirection:'row'}}>
                                     <Icon name={item.icon} type='font-awesome' size={20} />
                                     <Text style={{fontSize:13,marginHorizontal:2}}>{item.count}</Text>
