@@ -55,6 +55,26 @@ export const style = StyleSheet.create({
     },
     ascenter :{
         alignSelf : 'center'
+    },
+    flex1:{
+        flex:1
+    },
+    fwbold:{
+        fontWeight:'bold'
+    },
+    fz20:{
+        fontSize:20
+    },
+    fdrow:{
+        flexDirection:'row'
+    },
+    mb20:{
+        marginBottom:20
+    },
+    w90p:{
+        width:'90%'
+    },
+    h100p:{
+        height:'100%'
     }
-
 })
